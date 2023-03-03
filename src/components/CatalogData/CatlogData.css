@@ -1,0 +1,26 @@
+.card {
+  zoom: 99%;
+  border: none;
+}
+.card:hover {
+  zoom: 100%;
+  border: solid black 1px;
+}
+@media screen and (max-width: 480px) {
+  .filterColumn {
+    display: none;
+  }
+  .filterimg {
+    display: flex !important;
+    float: right !important;
+    margin-right: 10px;
+  }
+  .uponFilter {
+    z-index: 10 !important;
+  }
+}
+@media screen and (min-width: 480px) {
+  .filterimg {
+    display: none !important;
+  }
+}
