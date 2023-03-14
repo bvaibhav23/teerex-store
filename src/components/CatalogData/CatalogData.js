@@ -173,8 +173,6 @@ const CatalogData = ({ items, IncreaseCount, DecreaseCount, count }) => {
                     src={val.imageURL}
                     className="card-img-top p-2"
                     alt={val.name}
-                    width="100px"
-                    height="120px"
                   />
                   <div
                     className={
