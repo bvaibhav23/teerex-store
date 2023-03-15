@@ -132,7 +132,7 @@ const CatalogData = ({ items, IncreaseCount, DecreaseCount, count }) => {
           />
         </div>
 
-        <div className={show ? "col-10" : ""}>
+        <div className={"col-10 align-items-center" }>
           <div className="d-flex flex-wrap m-3 justify-content-center">
             {items
               .filter((val) => {
