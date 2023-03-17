@@ -1,17 +1,17 @@
-import React from 'react'
+import React from "react";
 
 const Search = ({ searchHandle }) => {
     return (
         <form className="d-flex">
             <input
-                className="form-control  searchBar"
+                className="form-control searchBar"
                 type="search"
-                placeholder="Search"
+                placeholder="Search..."
                 aria-label="Search"
                 onChange={searchHandle}
-
             />
-        </form>)
-}
+        </form>
+    );
+};
 
-export default Search
+export default Search;

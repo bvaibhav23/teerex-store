@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const FilterColumn = ({ filterType, filterData, filterHandle }) => {
     return (
         <div>
-            <h6 className='mt-2'> {filterType}</h6>
+            <h6 className="mt-2"> {filterType}</h6>
             {filterData.map((attribute, key) => (
                 <div key={key} className="form-check">
                     <input
@@ -18,7 +18,7 @@ const FilterColumn = ({ filterType, filterData, filterHandle }) => {
                 </div>
             ))}
         </div>
-    )
-}
+    );
+};
 
-export default FilterColumn
+export default FilterColumn;
