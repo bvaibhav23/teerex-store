@@ -9,6 +9,7 @@ import { addToCart } from "../../store/cartSlice";
 
 const CatalogData = () => {
   const items = useSelector((state) => state.products.data);
+  const loading = useSelector((state) => state.products.isLoading);
   const cartItems = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const [getSearch, setSearch] = useState("");
@@ -51,6 +52,8 @@ const CatalogData = () => {
   const searchHandle = (e) => {
     setSearch(e.target.value);
   };
+  if (loading)
+    return (<h1 className="text-center m-5">Loading... </h1>)
 
   return (
     <div className="container position-relative">
@@ -165,21 +168,20 @@ const CatalogData = () => {
             })
             .map((val, index) => (
               <div
-                className="card m-3 shadow p-1 border"
+                className="card m-3 shadow p-1 border rounded"
                 key={index}
-                style={{ width: "15rem" }}
+                style={{ width: "15rem", height: "24rem" }}
               >
                 <img
                   src={val.imageURL}
-                  className="card-img-top"
                   alt={val.name}
                 />
                 <div
                   className={
-                    "card-body d-flex flex-column align-items-center text-center justify-content-between"
+                    "card-body d-flex flex-column align-items-center "
                   }
                 >
-                  <h6 className="card-title">{val.name}</h6>
+                  <h5 className="card-title border-bottom">{val.name}</h5>
                   <p className="card-text ">
                     <span className="fw-bold"> ₹{val.price}</span>
                   </p>
